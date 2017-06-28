@@ -78,3 +78,12 @@ label.left
 {
     margin-bottom: 15px;
 }
+
+form input[type='submit']
+{
+    text-align: center;
+    position: relative;
+    width: 80px;
+    top:10px;
+    left:135px;
+}
