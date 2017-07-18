@@ -54,6 +54,7 @@ body
     width:450px;
     background-color:rgba(205,205,205,0.7);
     border-radius: 50px;
+    padding:15px;
 }
 
 #log form
@@ -86,4 +87,9 @@ form input[type='submit']
     width: 80px;
     top:10px;
     left:135px;
+}
+
+#mess_error
+{
+    color:tomato;
 }
