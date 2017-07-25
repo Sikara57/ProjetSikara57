@@ -1,14 +1,15 @@
 <?php
 session_start();
 
-$json_source=file_get_contents('script/ifa_annuaire.json');
-$json_data=json_decode($json_source);
-
-/*echo '<pre>';
-print_r($json_data);
-echo '</pre>';*/
 $pseudo_session = (isset($_SESSION['pseudo'])) ? $_SESSION['pseudo'] : null ;
 $identifie_session = (isset($_SESSION['identifie'])) ? $_SESSION['identifie'] : null ;
+$deco_session = (isset($_GET['deco']) && $_GET['deco']=='ok') ? true : null ;
+$error=0;
+if ($deco_session==true) 
+{
+    session_destroy();
+    header('Location:index.php');
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -16,13 +17,10 @@ $identifie_session = (isset($_SESSION['identifie'])) ? $_SESSION['identifie'] : 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="script/index.css">
-    <script type="text/javascript" src="script/jquery.js"></script>
-    <script type="text/javascript" src="script/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="script/lib/jquery.js"></script>
+    <script type="text/javascript" src="script/lib/jquery.validate.min.js"></script>
     <script type="text/javascript" src="script/identification.js"></script>
     <script type="text/javascript" src="script/validation.js"></script>
-    <script>
-        $(window.document).ready(function() {$('#mess_error').hide();});
-    </script>
     <title>Accueil</title>
 </head>
 <body>
@@ -59,17 +57,18 @@ $identifie_session = (isset($_SESSION['identifie'])) ? $_SESSION['identifie'] : 
 
                     if($condition==true)
                     {
-                        header('Location:annuaire.php');
+                        header('Location:index.php');
+                        $error=0;
                     }
                     else
                     {
-                        ?> <script type="text/javascript">$('#mess_error').show();</script><?php
+                        $error=2;
                     }
                     
                 }
                 else
                 {
-                    echo 'Aucun champ rempli';
+                    $error=1;
                 }
             }
 
@@ -87,11 +86,23 @@ $identifie_session = (isset($_SESSION['identifie'])) ? $_SESSION['identifie'] : 
             else
             {
                 //echo $identifie_session;
-                echo 'ouech gros!';
-                echo '<a href="annuaire.php">Annuaire</a>';
+                echo '<ul>';
+                    echo '<li><a href="index.php?deco=ok">Déconnexion</a></li>';
+                    echo '<li><a href="annuaire/annuaire.php">Annuaire</a></li>';
+                    echo '<li><a href="cours/cours.php">Cours</a></li>';
+                echo '</ul>';
+            }
+
+            if($error==1)
+            {
+                echo '<div id="mess_error">Au moins un champ n\'est pas rempli</div>';
+            }
+            elseif($error==2)
+            {
+                echo '<div id="mess_error">Erreur d\'identification</div>';
             }
         ?>
-        <div id="mess_error">Erreur d'identification</div>
+        
     </div>
 </section>
 </body>

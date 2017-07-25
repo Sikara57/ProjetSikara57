@@ -7,6 +7,11 @@ body
     overflow: hidden;
 }
 
+ul
+{
+    list-style: none;
+}
+
 .hidden
 {
     display: none;
@@ -91,5 +96,9 @@ form input[type='submit']
 
 #mess_error
 {
-    color:tomato;
+    position:absolute;
+    top:190px;
+    left:65px;
+    color:red;
+
 }

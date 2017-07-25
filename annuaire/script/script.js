@@ -43,7 +43,7 @@ $(window.document).ready(function() {
                     {
                         console.log("prout");
                         $('#detail_usr').append('<section class="usr" id="' + nom + '"></section>');
-                        $('#' + nom).append('<img id="identite" src="img/identite.png" alt="Identite">');
+                        $('#' + nom).append('<img id="identite" src="../img/identite.png" alt="Identite">');
                         $('#' + nom).append( '<div id="nom"> ' +val.nom + '<br/>' + val.prenom );
                         $('#' + nom).append('<div class="clear"></div>');
                         $('#' + nom).append('<br/> <span class="label"> Javascript déjà abordé : </span> ' + val.javascript);
@@ -56,7 +56,7 @@ $(window.document).ready(function() {
                         $('#' + nom).append('<div class="ifa"></div>' );
                         $('.ifa').append('<br/><span class="label"> Avant IFA :</span> ' + val.before_ifa);
                         $('.ifa').append('<br/> <span class="label"> Pourquoi l\'IFA : </span> <br/>' + val.why_ifa);
-                        $('#' + nom).append('<br/> <span class="label"> Mail : </span>' + val.contact_mail);
+                        $('#' + nom).append('<span class="label"> Mail : </span>' + val.contact_mail);
                         $("#" + myId).delay(150).slideDown("slow");
                         return true;
                     }
