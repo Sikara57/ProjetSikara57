@@ -1,6 +1,7 @@
 <?php
 session_start();
-
+$json_source=file_get_contents('annuaire/script/ifa_annuaire.json');
+$json_data=json_decode($json_source);
 $pseudo_session = (isset($_SESSION['pseudo'])) ? $_SESSION['pseudo'] : null ;
 $identifie_session = (isset($_SESSION['identifie'])) ? $_SESSION['identifie'] : null ;
 $deco_session = (isset($_GET['deco']) && $_GET['deco']=='ok') ? true : null ;
@@ -16,6 +17,7 @@ if ($deco_session==true)
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="script/general.css">
     <link rel="stylesheet" href="script/index.css">
     <script type="text/javascript" src="script/lib/jquery.js"></script>
     <script type="text/javascript" src="script/lib/jquery.validate.min.js"></script>

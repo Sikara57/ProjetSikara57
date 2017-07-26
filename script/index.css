@@ -1,20 +1,8 @@
-body
+li
 {
-    background-color:#cdcdcd;
-    height: 100%;
-    width:100%;
-    position: absolute;
-    overflow: hidden;
-}
-
-ul
-{
-    list-style: none;
-}
-
-.hidden
-{
-    display: none;
+    display:block;
+    text-align: left;
+    font-size: 14px;
 }
 
 #container
@@ -101,4 +89,13 @@ form input[type='submit']
     left:65px;
     color:red;
 
+}
+
+@media screen and (max-height:450px)
+{
+    #container
+    {
+        top:20px;
+        margin-top:0px;
+    }
 }

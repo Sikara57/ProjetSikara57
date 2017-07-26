@@ -1,0 +1,96 @@
+body
+{
+    background-color:#cdcdcd;
+    height: 100%;
+    width:100%;
+    position: absolute;
+    overflow: hidden;
+}
+
+.annuaire_logo
+{
+    width:800px;
+}
+
+ul
+{
+    list-style: none;
+
+}
+
+li
+{
+    display:inline-block;
+    font-size: 12px;
+    width:120px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+nav
+{
+    width:570px;
+    margin:auto;
+    background-color: black;
+    padding-bottom: 5px;
+    border-radius: 15px;
+    margin-top:-5px;
+}
+
+nav img
+{
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+nav a:hover
+{
+    background-color: white;
+    border-radius: 10px;
+    color:black;
+}
+
+a:link
+{
+    text-decoration: none;
+}
+
+.lien
+{
+    text-decoration: none;
+    color:white;
+
+}
+
+.lien_conservé
+{
+    background-color: white;
+    border-radius: 10px;
+    color:black;
+}
+
+.clear
+{
+    clear: both;
+}
+
+.hidden
+{
+    display: none;
+}
+
+@media screen and (max-width:800px) 
+{
+    body
+    {
+        overflow-x:initial;
+    }
+}
+
+@media screen and (max-height:450px)
+{
+    body
+    {
+        overflow-y:initial;
+    }
+}

@@ -10,6 +10,7 @@ if($_SESSION['identifie']==true)
     <head>
         <meta charset="UTF-8" />
         <title>Annuaire</title>
+        <link rel="stylesheet" href="../script/general.css">
         <link rel="stylesheet" href="script/annuaire.css">
 
         <script type="text/javascript" src="../lib/jquery.js"></script>

@@ -1,0 +1,19 @@
+nav
+{
+    width:800px;
+}
+
+hr
+{
+    margin-left:-40px;
+}
+
+article
+{
+    width:760px;
+    margin:auto;
+    background-color: white;
+    margin-top:5px;
+    border-radius:10px;
+    padding:20px;
+}
