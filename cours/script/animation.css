@@ -1,0 +1,38 @@
+.translation
+{
+    height:20px;
+    animation-name: translate;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    float:left;
+}
+
+@keyframes translate
+{
+    0% {transform:rotate(0deg);color: black;}
+    25% {transform:rotate(360deg);color: red;}
+    50%{transform:rotate(720deg);color: orange;}
+    75%{transform:rotate(1080deg);color: yellow;}
+    100%{transform:rotate(1440deg);color: black;}
+}
+
+.translationRotation
+{
+    margin-left: 5px;
+    height:20px;
+    animation-name: translateRotate;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    float:left;
+    position:relative;
+}
+
+@keyframes translateRotate
+{
+    0% {transform:rotate(0deg);color: black;left:600px;}
+    25% {transform:rotate(360deg);color: red;left:450px;}
+    50%{transform:rotate(720deg);color: orange;left:300px;}
+    75%{transform:rotate(1080deg);color: yellow;left:150px;}
+    100%{transform:rotate(1440deg);color: black;left:0px;}
+}
+

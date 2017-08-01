@@ -9,6 +9,7 @@ if($_SESSION['identifie']==true)
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../script/general.css">
+        <link rel="stylesheet" href="script/animation.css">
         <link rel="stylesheet" href="script/cours.css">
 
         <script type="text/javascript" src="../lib/jquery.js"></script>
@@ -34,10 +35,13 @@ if($_SESSION['identifie']==true)
                 <h2>HTML CSS</h2>
             </header>
             <article id="_html_cours">
-                <h3><span>Cours</span>&nbsp;<span>HTML</span></h3>
+                <h3><div class="translation">Cours</div>&nbsp;<div class="translationRotation">HTML</div></h3>
             </article>
             <article id="_html_exo">
-                _html_exo
+                <h3>
+                    <div class="translation">Exercices</div>
+                    <div class="translationRotation">HTML</div>
+                </h3>
             </article>
         </section>
         <section class="sec">
@@ -45,10 +49,16 @@ if($_SESSION['identifie']==true)
                 <h2>Javascript</h2>
             </header>
             <article id="_js_cours">
-                _js_cours
+                 <h3>
+                    <div class="translation">Cours</div>
+                    <div class="translationRotation">Javascript</div>
+                </h3>
             </article>
             <article id="_js_exo">
-                _js_exo
+                 <h3>
+                    <div class="translation">Exercices</div>
+                    <div class="translationRotation">Javascript</div>
+                </h3>
             </article>
         </section>
         <section class="sec">
@@ -56,10 +66,16 @@ if($_SESSION['identifie']==true)
                 <h2>PHP</h2>
             </header>
             <article id="_php_cours">
-                _php_cours
+                 <h3>
+                    <div class="translation">Cours</div>
+                    <div class="translationRotation">PHP</div>
+                </h3>
             </article>
             <article id="_php_exo">
-                _php_exo
+                 <h3>
+                    <div class="translation">Exercices</div>
+                    <div class="translationRotation">PHP</div>
+                </h3>
             </article>
         </section>
     </body>
